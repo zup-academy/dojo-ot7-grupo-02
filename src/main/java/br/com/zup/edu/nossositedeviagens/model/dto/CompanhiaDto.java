@@ -1,5 +1,7 @@
 package br.com.zup.edu.nossositedeviagens.model.dto;
 
+import br.com.zup.edu.nossositedeviagens.Repository.CompanhiaRepository;
+import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.model.Companhia;
 
 import javax.validation.constraints.NotBlank;
@@ -19,7 +21,9 @@ public class CompanhiaDto {
         this.pais = pais;
     }
 
-    public Companhia converter() {
-        return new Companhia();
+    public Companhia converter(PaisRepository paisRepository) {
+        var pais = paisRepository.getById(this.pais);
+
+        return new Companhia(this.nome, pais);
     }
 }
