@@ -1,7 +1,7 @@
 package br.com.zup.edu.nossositedeviagens.controller;
 
-import br.com.zup.edu.nossositedeviagens.Repository.CompanhiaRepository;
-import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
+import br.com.zup.edu.nossositedeviagens.repository.CompanhiaRepository;
+import br.com.zup.edu.nossositedeviagens.repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.model.dto.CompanhiaDto;
 import br.com.zup.edu.nossositedeviagens.model.dto.CompanhiaResponse;
 import org.springframework.beans.factory.annotation.Autowired;

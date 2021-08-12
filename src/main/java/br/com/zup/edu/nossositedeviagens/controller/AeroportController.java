@@ -1,8 +1,8 @@
 package br.com.zup.edu.nossositedeviagens.controller;
 
 
-import br.com.zup.edu.nossositedeviagens.Repository.AeroportReposity;
-import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
+import br.com.zup.edu.nossositedeviagens.repository.AeroportReposity;
+import br.com.zup.edu.nossositedeviagens.repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.model.dto.AeroportDto;
 import br.com.zup.edu.nossositedeviagens.model.dto.AeroportResponse;
 import org.springframework.http.ResponseEntity;

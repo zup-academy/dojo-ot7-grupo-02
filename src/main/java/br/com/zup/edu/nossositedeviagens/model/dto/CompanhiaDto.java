@@ -1,12 +1,10 @@
 package br.com.zup.edu.nossositedeviagens.model.dto;
 
-import br.com.zup.edu.nossositedeviagens.Repository.CompanhiaRepository;
-import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
+import br.com.zup.edu.nossositedeviagens.repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.model.Companhia;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.time.LocalDateTime;
 
 public class CompanhiaDto {
 

@@ -1,10 +1,9 @@
 package br.com.zup.edu.nossositedeviagens.controller;
 
 
-import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.model.Pais;
-import br.com.zup.edu.nossositedeviagens.model.dto.PaisDto;
 import br.com.zup.edu.nossositedeviagens.model.dto.PaisResponse;
+import br.com.zup.edu.nossositedeviagens.repository.PaisRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

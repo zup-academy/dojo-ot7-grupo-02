@@ -1,6 +1,6 @@
 package br.com.zup.edu.nossositedeviagens.model.dto;
 
-import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
+import br.com.zup.edu.nossositedeviagens.repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.annotation.UniqueGenerico;
 import br.com.zup.edu.nossositedeviagens.model.Aeroport;
 
