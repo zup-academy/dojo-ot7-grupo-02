@@ -1,19 +1,17 @@
 package br.com.zup.edu.nossositedeviagens.model.dto;
 
-import br.com.zup.edu.nossositedeviagens.model.Companhia;
+import br.com.zup.edu.nossositedeviagens.model.Aeroport;
 
-public class CompanhiaResponse {
+public class AeroportResponse {
 
     private Long id;
-
     private String nome;
-
     private PaisResponse pais;
 
-    public CompanhiaResponse(Companhia companhia) {
-        this.id = companhia.getId();
-        this.nome = companhia.getNome();
-        this.pais = new PaisResponse(companhia.getPais());
+    public AeroportResponse(Aeroport createdAeroport) {
+        this.id = createdAeroport.getId();
+        this.nome = createdAeroport.getNome();
+        this.pais = new PaisResponse(createdAeroport.getPais());
     }
 
     public Long getId() {

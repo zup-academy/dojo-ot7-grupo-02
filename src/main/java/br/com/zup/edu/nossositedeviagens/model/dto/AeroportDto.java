@@ -1,5 +1,6 @@
 package br.com.zup.edu.nossositedeviagens.model.dto;
 
+import br.com.zup.edu.nossositedeviagens.Repository.PaisRepository;
 import br.com.zup.edu.nossositedeviagens.model.Aeroport;
 
 public class AeroportDto {
@@ -23,9 +24,9 @@ public class AeroportDto {
         this.pais = pais;
     }
 
-    public Aeroport converter(){
+    public Aeroport converter(PaisRepository paisRepository) {
+        var pais = paisRepository.getById(this.pais);
 
-
+        return new Aeroport(this.nome, pais);
     }
-
 }
