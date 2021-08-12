@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -25,7 +26,7 @@ public class CompanhiaController {
     private PaisRepository paisRepository;
 
     @PostMapping
-    public ResponseEntity<CompanhiaResponse> cadastra(@RequestBody CompanhiaDto companhiaDto, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<CompanhiaResponse> cadastra(@RequestBody @Valid CompanhiaDto companhiaDto, UriComponentsBuilder uriComponentsBuilder) {
 
         var companhia = companhiaDto.converter(this.paisRepository);
         var createdComp = companhiaRepository.save(companhia);

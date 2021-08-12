@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 
 @RestController
@@ -27,7 +28,7 @@ public class AeroportController {
     }
 
     @PostMapping
-    public ResponseEntity<AeroportResponse> cadastra(@RequestBody AeroportDto aeroportDto, UriComponentsBuilder uriComponentsBuilder) {
+    public ResponseEntity<AeroportResponse> cadastra(@RequestBody @Valid AeroportDto aeroportDto, UriComponentsBuilder uriComponentsBuilder) {
         var aeroport = aeroportDto.converter(this.paisRepository);
         var createdAeroport = aeroportReposity.save(aeroport);
         URI uri = uriComponentsBuilder.path("/aeroporto/{id}").buildAndExpand(createdAeroport.getId()).toUri();
